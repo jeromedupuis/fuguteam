@@ -5,7 +5,7 @@
     </div>
     <div class="box-content">
       <div class="page-company_outline row">
-        <dl class="col-6">
+        <!-- <dl class="col-6">
           <dt>会社名</dt>
           <dd>株式会社Fugucode</dd>
 
@@ -38,7 +38,7 @@
 
           <dt>TEL</dt>
           <dd>000-0000-0000</dd>
-        </dl>
+        </dl> -->
       </div>
     </div>
   </div>

@@ -5,6 +5,11 @@ const SET_LANG = 'SET_LANG';
 const state = {
   locale: 'en'
 };
+const getters = {
+  getLocale(state) {
+    return state.locale;
+  }
+};
 const actions = {
   setLang({commit}, payload) {
     commit(SET_LANG, payload);
@@ -20,6 +25,7 @@ const mutations = {
 
 export default {
   state,
+  getters,
   actions,
   mutations
 };

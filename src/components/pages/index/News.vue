@@ -1,5 +1,5 @@
 <template>
-  <div class="box box--wrapper">
+  <div class="box box--wrapper" v-if="news && news.length">
     <div class="box-title">
       <h2>NEWS</h2>
     </div>

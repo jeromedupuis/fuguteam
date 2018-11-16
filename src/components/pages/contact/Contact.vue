@@ -2,7 +2,7 @@
   <layout-default class="page-contact">
     <layout-introduction
       title="Contact"
-      subtitle="Web Agency"
+      :subtitle="$t('intro-web-agency')"
       :fullscreen="false"
     />
     <div class="box box--wrapper">
@@ -53,7 +53,7 @@
         <button type="submit" class="ui-btn btn--main" value="この内容で送信">この内容で送信します</button>
       </div>
     </div>
-    <company-map />
+    <!-- <company-map /> -->
   </layout-default>
 </template>
 

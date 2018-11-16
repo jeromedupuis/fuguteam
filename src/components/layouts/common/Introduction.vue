@@ -9,7 +9,7 @@
 
 
       <div v-if="animation && fullscreen" class="layout-intro_animation" ref="logoAnimation">
-        <span>.</span><span>f</span><span>u</span><span>g</span><span>u</span><span>r</span><span>e</span><span>c</span><span>o</span><span>&nbsp;{</span>
+        <span>.</span><span>f</span><span>u</span><span>g</span><span>u</span><span>T</span><span>e</span><span>a</span><span>m</span><span>&nbsp;{</span>
 
         <template v-if="!displayAnimationLogo">
           <span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>: </span><span>b</span><span>l</span><span>o</span><span>c</span><span>k</span><span>;</span>

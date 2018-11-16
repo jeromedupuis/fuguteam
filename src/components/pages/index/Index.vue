@@ -2,7 +2,7 @@
   <layout-default class="page-index">
     <layout-introduction
       title="Skilled cooker for a successful project."
-      subtitle="Web Agency"
+      :subtitle="$t('intro-web-agency')"
       lead="We are focused on delivering high-class HTML/CSS markup, VueJs, react SPA development."
       :animation="true"
     />

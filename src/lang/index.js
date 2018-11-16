@@ -1,11 +1,18 @@
+import common from './common/index.js';
 import about from './about/index.js';
+let files = [common, about];
 
-let files = [about];
-
-let messages = {};
+let messages = {
+  fr: {},
+  en: {},
+  ja: {}
+};
 
 files.map((file) => {
-  Object.assign(messages, file);
+  for(var lang in file) {
+    Object.assign(messages[lang], file[lang]);
+  }
 });
+console.log('messages', messages);
 
 export default messages;

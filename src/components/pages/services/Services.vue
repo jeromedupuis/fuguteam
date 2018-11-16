@@ -2,7 +2,7 @@
   <layout-default>
     <layout-introduction
       title="Services"
-      subtitle="Web Agency"
+      :subtitle="$t('intro-web-agency')"
       :fullscreen="false"
     />
   </layout-default>

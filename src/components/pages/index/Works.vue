@@ -1,5 +1,5 @@
 <template>
-  <div class="box box--wrapperVertical">
+  <div class="box box--wrapperVertical" v-if="projects && projects.length">
     <div class="box-title">
       <h2>WORKS</h2>
     </div>
@@ -14,6 +14,16 @@ import WorksProjects from '../common/Projects';
 export default {
   components: {
     WorksProjects
+  },
+  computed: {
+    projects() {
+      return this.$store.getters.getProjects.filter((x) => {
+        if(this.onlyIndex) {
+          return x.index === true;
+        }
+        return true;
+      });
+    }
   }
 };
 </script>

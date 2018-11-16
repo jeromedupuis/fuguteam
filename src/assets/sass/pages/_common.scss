@@ -3,12 +3,15 @@
   .box-content {
     padding-top:0;
   }
-  .col-3 {
+  [class^="col-"] {
     margin-top: 56px;
   }
   img {
     width:150px;
     height: auto;
+    &.is--invert {
+      filter: invert(1);
+    }
   }
 }
 .section-project_list {

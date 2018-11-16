@@ -1,37 +1,13 @@
 const state = {
   list: [
-    {
-      id: 1,
-      slug: 'this-is-a-sample-title',
-      title: 'This is a sample title',
-      description: 'this is a sample description this is a sample description this is a sample description this is a sample description',
-      date: '2019-01-01',
-      body: '20190101'
-    },
-    {
-      id: 2,
-      slug: 'this-is-a-sample-title',
-      title: 'This is a sample title',
-      description: 'this is a sample description this is a sample description this is a sample description this is a sample description',
-      date: '2019-01-01',
-      body: '20190101'
-    },
-    {
-      id: 3,
-      slug: 'this-is-a-sample-title',
-      title: 'This is a sample title',
-      description: 'this is a sample description this is a sample description this is a sample description this is a sample description',
-      date: '2019-01-01',
-      body: '20190101'
-    },
-    {
-      id: 4,
-      slug: 'this-is-a-sample-title',
-      title: 'This is a sample title',
-      description: 'this is a sample description this is a sample description this is a sample description this is a sample description',
-      date: '2018-01-01',
-      body: '20180101'
-    }
+    // {
+    //   id: 1,
+    //   slug: 'this-is-a-sample-title',
+    //   title: 'This is a sample title',
+    //   description: 'this is a sample description this is a sample description this is a sample description this is a sample description',
+    //   date: '2019-01-01',
+    //   body: '20190101'
+    // }
   ]
 };
 const getters = {

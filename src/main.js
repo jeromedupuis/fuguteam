@@ -12,9 +12,7 @@ import router from './router';
 import store from './store';
 import i18n from './lang';
 import libs from './libs';
-import api from './api';
 
-Vue.$api = api;
 Vue.config.productionTip = false;
 Vue.$bus = EventBus;
 Vue.$store = store;

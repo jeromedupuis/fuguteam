@@ -1,28 +1,11 @@
 const state = {
   list: [
-    {
-      name: 'Sample',
-      img: 'clients/sample.svg'
-    },
-    {
-      name: 'Sample',
-      img: 'clients/sample.svg'
-    },
-    {
-      name: 'Sample',
-      img: 'clients/sample.svg'
-    },{
-      name: 'Sample',
-      img: 'clients/sample.svg'
-    },
     {},
     {
-      name: 'Sample',
-      img: 'clients/sample.svg'
-    },
-    {
-      name: 'Sample',
-      img: 'clients/sample.svg'
+      name: '株式会社Hatte',
+      name_en: 'Hatte inc.',
+      img: 'clients/hatte-inc.png',
+      invert: true
     },
     {}
   ]

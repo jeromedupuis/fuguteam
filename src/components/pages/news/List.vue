@@ -10,19 +10,21 @@
 
       <div class="row">
         <div class="col-9">
-          <div class="page-news_listItem" v-for="(n, index) in news" :key="index">
-            <router-link :to="`/news/${n.date}/${n.slug}/${n.id}`">
-              <div class="box-title">
-                <div class="page-news_date">
-                  {{ n.date | moment('YYYY.MM.DD') }}
+          <template v-if="news && news.length">
+            <div class="page-news_listItem" v-for="(n, index) in news" :key="index">
+              <router-link :to="`/news/${n.date}/${n.slug}/${n.id}`">
+                <div class="box-title">
+                  <div class="page-news_date">
+                    {{ n.date | moment('YYYY.MM.DD') }}
+                  </div>
+                  <h1>{{ n.title }}</h1>
                 </div>
-                <h1>{{ n.title }}</h1>
-              </div>
-              <p class="page-news_description">
-                {{ n.description }}
-              </p>
-            </router-link>
-          </div>
+                <p class="page-news_description">
+                  {{ n.description }}
+                </p>
+              </router-link>
+            </div>
+          </template>
         </div>
         <div class="col-3">
           <news-sidebar />

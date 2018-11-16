@@ -2,7 +2,7 @@
   <layout-default v-if="thisNew" class="page-news_article">
     <layout-introduction
       :title="thisNew.title"
-      subtitle="NEWS"
+      :subtitle="$t('intro-news')"
       :fullscreen="false"
     />
 

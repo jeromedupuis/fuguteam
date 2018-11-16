@@ -4,40 +4,13 @@ const state = {
       title: 'Sample',
       img: 'projects/sample.jpg',
       date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+      description: {
+        ja: 'サンプル',
+        fr: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        en: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+      },
       index: true
-    },
-    {
-      title: 'Sample',
-      img: 'projects/sample.jpg',
-      date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-      index: true
-    },
-    {
-      title: 'Sample',
-      img: 'projects/sample.jpg',
-      date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-      index: true
-    },{
-      title: 'Sample',
-      img: 'projects/sample.jpg',
-      date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
-    },
-    {
-      title: 'Sample',
-      img: 'projects/sample.jpg',
-      date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
-    },
-    {
-      title: 'Sample',
-      img: 'projects/sample.jpg',
-      date: '2018-10-10',
-      description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
-    },
+    }
   ]
 };
 const getters = {

@@ -5,7 +5,7 @@ Vue.use(Router);
 
 import PageIndex from '@/components/pages/index/Index';
 import PageAbout from '@/components/pages/about/About';
-import PageCompany from '@/components/pages/company/Company';
+import PageTeam from '@/components/pages/team/Team';
 import PageContact from '@/components/pages/contact/Contact';
 import PageWorks from '@/components/pages/works/Works';
 import PageServices from '@/components/pages/services/Services';
@@ -26,10 +26,15 @@ const router = new Router({
       component: PageAbout
     },
     {
-      path: '/company',
-      name: 'PageCompany',
-      component: PageCompany
+      path: '/team',
+      name: 'PageTeam',
+      component: PageTeam
     },
+    // {
+    //   path: '/company',
+    //   name: 'PageCompany',
+    //   component: PageCompany
+    // },
     {
       path: '/contact',
       name: 'PageContact',

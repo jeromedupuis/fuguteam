@@ -7,12 +7,14 @@ import LangStore from './store/lang';
 import ClientsStore from './store/clients';
 import NewsStore from './store/news';
 import ProjectsStore from './store/projects';
+import MembersStore from './store/members';
 
 export default new Vuex.Store({
   modules: {
     lang: LangStore,
     clients: ClientsStore,
     news: NewsStore,
-    projects: ProjectsStore
+    projects: ProjectsStore,
+    members: MembersStore
   }
 });

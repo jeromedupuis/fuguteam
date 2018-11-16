@@ -1,15 +1,14 @@
 <template>
   <layout-default class="page-company">
     <layout-introduction
-      :title="$t('intro-company')"
+      title="Team"
       :subtitle="$t('intro-web-agency')"
       :fullscreen="false"
     />
 
-    <company-outline />
-    <company-members />
-    <company-vision />
-    <company-map />
+    <team-outline />
+    <team-members />
+    <team-vision />
 
   </layout-default>
 </template>
@@ -17,19 +16,17 @@
 <script>
 import LayoutDefault from '@/components/layouts/default/Layout';
 import LayoutIntroduction from '@/components/layouts/common/Introduction';
-import CompanyMap from '../common/Map';
-import CompanyOutline from './Outline';
-import CompanyMembers from './Members';
-import CompanyVision from './Vision';
+import TeamOutline from './Outline';
+import TeamMembers from './Members';
+import TeamVision from './Vision';
 
 export default {
   components: {
     LayoutDefault,
     LayoutIntroduction,
-    CompanyOutline,
-    CompanyMembers,
-    CompanyVision,
-    CompanyMap
+    TeamOutline,
+    TeamMembers,
+    TeamVision
   },
   data() {
     return {
