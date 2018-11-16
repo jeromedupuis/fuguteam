@@ -1,0 +1,49 @@
+.box--wrapper {
+    padding:70px;
+}
+.box--wrapperVertical {
+  padding: 70px 0;
+}
+.box-content {
+    padding: 40px 10px;
+    &.paddingTop--none {
+        padding-top:0;
+    }
+}
+.container {
+    position: relative;
+}
+.container--row {
+    position: relative;
+}
+.page--inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.box {
+    &:nth-child(odd) {
+      background: #f8f8f8
+    }
+}
+
+
+@media only screen and (max-width: $max-width-tablet) {
+  .box--wrapper {
+      padding:50px 20px;
+  }
+  .box--wrapperVertical {
+    padding: 50px 0;
+  }
+  .page--inner {
+    max-width: $inner-tablet;
+    margin: 0 auto;
+  }
+  .box-content {
+    padding: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: $max-width-mobile) {
+
+}

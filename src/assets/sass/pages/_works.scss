@@ -1,0 +1,10 @@
+.page-works {
+    .box {
+        &:nth-child(odd) {
+          background: #f8f8f8
+        }
+    }
+    .box--about {
+      text-align: justify;
+    }
+}
