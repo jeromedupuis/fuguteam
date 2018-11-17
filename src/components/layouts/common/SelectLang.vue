@@ -12,6 +12,11 @@
 export default {
   methods: {
     setLang(lang) {
+      let currentUrl = window.location.href;
+      let nextUrl = currentUrl.replace(`/${this.getLocale}`, `/${lang}`);
+      history.pushState({
+        id: 'pushState'
+      }, 'pushState', nextUrl);
       this.$store.dispatch('setLang', lang);
     }
   }

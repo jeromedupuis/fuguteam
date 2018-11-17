@@ -29,7 +29,8 @@ export default {
         active: formData.active,
         lang: formData.lang,
         date: formData.date,
-        slug: formData.slug
+        slug: formData.slug,
+        meta: formData.meta
       })
         .then(() => {
           this.addNotification('New has been created successfully', 'success');

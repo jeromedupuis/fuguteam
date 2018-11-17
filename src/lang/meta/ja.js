@@ -22,7 +22,7 @@ export default {
   "meta-news-keywords": "keywords, keywords2",
   "meta-news-prefix-title": "News Detail",
   "meta-news-prefix-description": "",
-  "meta-news-prefix-keywords": "",
+  "meta-news-prefix-keywords": "news",
   "meta-contact-title": "Contact",
   "meta-contact-description": "Description Contact",
   "meta-contact-keywords": "keywords, keywords2",

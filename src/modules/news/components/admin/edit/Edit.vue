@@ -1,6 +1,6 @@
 <template>
   <layout-admin class="page--newsList">
-    <slot-header-title title="ニュースを作成" :icon="null" />
+    <slot-header-title title="ニュースを編集" :icon="null" />
 
     <section class="section-loader" v-show="isPageLoading">
       <ui-loader-circle />
@@ -61,7 +61,8 @@ export default {
         active: formData.active,
         lang: formData.lang,
         date: formData.date,
-        slug: formData.slug
+        slug: formData.slug,
+        meta: formData.meta
       })
         .then(() => {
           this.addNotification('New has been edited successfully', 'success');

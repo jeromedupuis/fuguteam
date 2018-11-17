@@ -20,6 +20,20 @@
             <mavon-editor v-model="formData.body" language="en" :htmlCode="true" ref="editor-body" />
           </div>
         </div>
+
+        <div class="row row--meta">
+          <h2>META</h2>
+          <div class="col-12">
+            <p>Description</p>
+            <ui-input-text v-model="formData.meta.description" placeholder="meta tags description" class="is--fluid" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>Keywords</p>
+            <ui-input-text v-model="formData.meta.keywords" placeholder="meta, tags, keywords, ..." class="is--fluid" />
+          </div>
+        </div>
       </div>
       <div class="col-3 page--newsList_formSidebar">
         <div class="row">
@@ -88,7 +102,11 @@ export default {
         active: true,
         body: '',
         date: moment().format('YYYY/MM/DD'),
-        slug: ''
+        slug: '',
+        meta: {
+          description: '',
+          keywords: ''
+        }
       }
     };
   },
@@ -139,5 +157,11 @@ export default {
     border-radius: 18px;
     padding: 24px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+  }
+  .row--meta {
+    margin-top:32px;
+    h2 {
+      margin-bottom: 22px;
+    }
   }
 </style>

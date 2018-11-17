@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 const FETCH_ADMIN_NEWS = 'FETCH_ADMIN_NEWS';
 const FETCH_ADMIN_ONE_NEW = 'FETCH_ADMIN_ONE_NEW';
+const REMOVE_ONE_NEW = 'REMOVE_ONE_NEW';
 
 const state = () => {
   return {
@@ -34,6 +35,9 @@ const actions = {
     });
 
     commit(FETCH_ADMIN_NEWS, docs);
+  },
+  adminRemoveNew({commit}, id) {
+    commit(REMOVE_ONE_NEW, id);
   }
 };
 const mutations = {
@@ -49,6 +53,14 @@ const mutations = {
       state.list.push(payload);
     } else {
       Object.assign(state.list[index], payload);
+    }
+  },
+  [REMOVE_ONE_NEW] (state, payload) {
+    let index = state.list.findIndex((x) => {
+      return x.id === payload;
+    });
+    if(index > -1) {
+      state.list.splice(index, 1);
     }
   }
 };

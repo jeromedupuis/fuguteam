@@ -8,6 +8,7 @@ import InputNumber from '../components/form/InputNumber';
 import InputSubmit from '../components/form/InputSubmit';
 import Select from '../components/form/Select';
 import LoaderCircle from '../components/loader/LoaderCircle';
+import DialogConfirm from '../components/dialog/Confirm';
 
 export default {
   components: {
@@ -20,6 +21,7 @@ export default {
     'ui-input-number': InputNumber,
     'ui-input-submit': InputSubmit,
     'ui-select': Select,
-    'ui-loader-circle': LoaderCircle
+    'ui-loader-circle': LoaderCircle,
+    "ui-dialog-confirm": DialogConfirm
   }
 };

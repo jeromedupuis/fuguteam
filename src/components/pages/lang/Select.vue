@@ -18,7 +18,11 @@ export default {
     }
   },
   mounted() {
-    console.log(this.lang);
+    if(!this.lang) {
+      this.$router.push(`/${this.getLocale}`);
+    }
+  },
+  updated() {
     if(!this.lang) {
       this.$router.push(`/${this.getLocale}`);
     }

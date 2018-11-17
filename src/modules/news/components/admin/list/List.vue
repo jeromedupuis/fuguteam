@@ -33,7 +33,7 @@
               <td>{{ one.active ? '公開': '非公開' }}</td>
               <td>
                 <router-link :to="`/admin/module/news/edit/${one.id}`" class="ui-table_row_icon"><img src="/static/img/svg/034-pencil.svg" /></router-link>
-                <a class="ui-table_row_icon" @click.prevent="removeNew(one)"><img src="/static/img/svg/035-remove.svg" /></a>
+                <a class="ui-table_row_icon" @click.prevent="removeNewConfirm(one)"><img src="/static/img/svg/035-remove.svg" /></a>
               </td>
             </tr>
           </tbody>
@@ -69,15 +69,30 @@ export default {
     }
   },
   methods: {
-    async removeNew(one) {
-      let response = await Vue.$api.delete('/news/'+one._id);
-      if(response) {
-        this.$store.dispatch('adminRemoveNew', response._id);
-        this.addNotification('New has been removed successfully', 'success');
-      }
-      else {
-        this.addNotification('An error occured, please try again', 'error');
-      }
+    async removeNew(doc) {
+      var query = Vue.$db.collection('news').doc(doc.id);
+      let querySnapshot = await query.get();
+
+      querySnapshot.ref.delete()
+        .then(() => {
+          this.$store.dispatch('adminRemoveNew', doc.id);
+          this.addNotification('ニュースが削除されました。', "success");
+        })
+        .catch(() => {
+          this.addNotification('An error occured, please try again.', "error");
+        });
+
+
+    },
+    async removeNewConfirm(one) {
+
+      Vue.$bus.$emit("setConfirmDialog", {
+        title: 'ニュースを削除',
+        description: 'この操作は元に戻せません。削除しますか？',
+        submit: () => {
+          this.removeNew(one);
+        }
+      });
     }
   },
   async created() {

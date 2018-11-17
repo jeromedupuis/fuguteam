@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import _ from 'lodash';
 import LayoutDefault from '@/components/layouts/default/Layout';
 import LayoutIntroduction from '@/components/layouts/common/Introduction';
 import NewsSidebar from './Sidebar';
@@ -39,13 +40,13 @@ import NewsSidebar from './Sidebar';
 export default {
   metaInfo () {
     return {
-      title: this.$t(`meta-news-prefix-title`),
+      title: _.get(this.thisNew, 'title', this.$t(`meta-news-prefix-title`)),
       meta: [{
         name: `description`,
-        content: this.$t(`meta-news-prefix-description`),
+        content: _.get(this.thisNew, 'meta.description', this.$t(`meta-news-prefix-description`))
       }, {
         name: `keywords`,
-        content: this.$t(`meta-news-prefix-keywords`),
+        content: _.get(this.thisNew, 'meta.keywords', this.$t(`meta-news-prefix-keywords`))
       }]
     };
   },
@@ -55,6 +56,9 @@ export default {
     NewsSidebar
   },
   props: {
+    lang: {
+      required: true
+    },
     id: {
       required: true
     },
@@ -65,13 +69,24 @@ export default {
       required: true
     }
   },
+  watch: {
+    getLocale(val) {
+      if(this.thisNew !== val) {
+        this.$router.push(`/${val}/news/`);
+      }
+    }
+  },
   async mounted() {
     await this.$store.dispatch('resetOne');
     await this.$store.dispatch('fetchOneNew', {
       id: this.id,
       date: this.date,
-      slug: this.slug
+      slug: this.slug,
+      lang: this.lang
     });
+    if(this.thisNew.lang !== this.lang) {
+      this.$router.push(`/${this.getLocale}/news/`);
+    }  
   },
   computed: {
     thisNew() {

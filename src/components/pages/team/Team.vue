@@ -6,9 +6,9 @@
       :fullscreen="false"
     />
 
-    <team-outline />
-    <team-members />
     <team-vision />
+    <team-values />
+    <team-members />
 
   </layout-default>
 </template>
@@ -16,17 +16,17 @@
 <script>
 import LayoutDefault from '@/components/layouts/default/Layout';
 import LayoutIntroduction from '@/components/layouts/common/Introduction';
-import TeamOutline from './Outline';
 import TeamMembers from './Members';
 import TeamVision from './Vision';
+import TeamValues from './Values';
 
 export default {
   components: {
     LayoutDefault,
     LayoutIntroduction,
-    TeamOutline,
     TeamMembers,
-    TeamVision
+    TeamVision,
+    TeamValues
   },
   data() {
     return {

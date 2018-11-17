@@ -48,9 +48,9 @@ const actions = {
 
     commit(FETCH_NEWS, docs);
   },
-  async fetchOneNew({commit, getters}, { id, slug, date }) {
+  async fetchOneNew({commit, getters}, { id, slug, date, lang }) {
 
-    let oneNew = await getters.getOneNew({ id, slug, date });
+    let oneNew = await getters.getOneNew({ id, slug, date, lang });
     if(oneNew) {
       commit(SET_ONE, oneNew);
       return true;
@@ -66,7 +66,7 @@ const actions = {
         id: querySnapshot.id
       };
       commit(SET_ONE, doc);
-      return true;
+      return doc;
     }
   },
   resetOne({commit}) {

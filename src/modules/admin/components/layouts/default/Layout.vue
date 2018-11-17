@@ -7,7 +7,7 @@
         <slot />
       </div>
     </div>
-    <sidebar-comment />
+    <ui-dialog-confirm />
   </div>
 </template>
 

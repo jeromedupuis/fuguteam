@@ -15,5 +15,6 @@ export default {
   "our-clients-title": "OUR CLIENTS",
   "our-clients-description": "We are focused on delivering high-class HTML/CSS markup, VueJs, react SPA development.",
   "title-members": "MEMBERS",
-  "title-vision": "VISION"
+  "title-vision": "VISION",
+  "title-values": "VALUES"
 };
