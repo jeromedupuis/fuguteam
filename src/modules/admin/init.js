@@ -7,8 +7,6 @@
  */
 
 import Store from './store/';
-
-import AdminRoutes from './routes.js';
 import AdminMixins from './mixins/Admin.js';
 
 export default {
@@ -18,5 +16,4 @@ export default {
   mixins: {
     admin: AdminMixins
   },
-  routes: AdminRoutes
 };

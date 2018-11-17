@@ -12,6 +12,11 @@ import FormNews from '../form/Form';
 import Vue from 'vue';
 
 export default {
+  metaInfo () {
+    return {
+      title: 'ニュースを作成'
+    };
+  },
   components: {
     FormNews
   },

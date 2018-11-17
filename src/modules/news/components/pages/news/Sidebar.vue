@@ -5,7 +5,7 @@
     </div>
 
     <ul>
-      <li v-for="(year, index) in years" :key="index"><router-link :to="`/news/${year}`">{{ year }}</router-link></li>
+      <li v-for="(year, index) in years" :key="index"><router-link :to="`/${getLocale}/news/${year}`">{{ year }}</router-link></li>
     </ul>
 
     <div class="page-new_sidebarSns">

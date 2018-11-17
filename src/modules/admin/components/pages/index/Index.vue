@@ -9,5 +9,11 @@
 </style>
 
 <script>
-
+export default {
+  metaInfo () {
+    return {
+      title: 'Dashboard'
+    };
+  }
+};
 </script>

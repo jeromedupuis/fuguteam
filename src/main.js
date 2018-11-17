@@ -33,10 +33,10 @@ import libs from './libs';
 Vue.config.productionTip = false;
 Vue.$bus = EventBus;
 Vue.$store = store;
+Vue.$i18n = i18n;
 Vue.$libs = libs;
 
 Vue.use(VueScrollTo);
-
 Vue.use(VueProgressBar, {
   color: '#04538e',
   failedColor: '#ff3d55',

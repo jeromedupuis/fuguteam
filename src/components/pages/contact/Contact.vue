@@ -52,7 +52,7 @@
         <div class="page-contact_formSubmit">
           <input type="hidden" name="_language" :value="getLocale" />
           <input type="hidden" name="_subject" value="Fugu.teamお問い合わせ" />
-          <input type="hidden" name="_next" value="http://localhost:8081/contact-thanks" />
+          <input type="hidden" name="_next" :value="`https://www.fugu.team/${getLocale}/contact-thanks`" />
           <button type="submit" class="ui-btn btn--main" value="この内容で送信">この内容で送信します</button>
         </div>
       </div>
@@ -71,6 +71,18 @@ export default {
     LayoutDefault,
     LayoutIntroduction,
     CompanyMap
+  },
+  metaInfo () {
+    return {
+      title: this.$t(`meta-contact-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-contact-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-contact-keywords`),
+      }]
+    };
   }
 };
 </script>

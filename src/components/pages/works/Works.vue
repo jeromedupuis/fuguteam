@@ -33,6 +33,18 @@ export default {
     LayoutIntroduction,
     WorksClients,
     WorksProjects
+  },
+  metaInfo () {
+    return {
+      title: this.$t(`meta-works-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-works-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-works-keywords`),
+      }]
+    };
   }
 };
 </script>

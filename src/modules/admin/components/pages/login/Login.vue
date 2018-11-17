@@ -42,6 +42,11 @@
 import firebase from 'firebase';
 
 export default {
+  metaInfo () {
+    return {
+      title: 'Login'
+    };
+  },
   data() {
     return {
       email: '',

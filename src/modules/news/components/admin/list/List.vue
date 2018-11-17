@@ -48,6 +48,11 @@ import Vue from 'vue';
 import _ from 'lodash';
 
 export default {
+  metaInfo () {
+    return {
+      title: 'ニュース一覧'
+    };
+  },
   data() {
     return {
       isPageLoading: false

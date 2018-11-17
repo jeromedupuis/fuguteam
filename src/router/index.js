@@ -1,11 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import _ from 'lodash';
+import Meta from 'vue-meta';
 
 Vue.use(Router);
+Vue.use(Meta);
 
 import firebase from 'firebase';
 import PageIndex from '@/components/pages/index/Index';
+import PageSelectLang from '@/components/pages/lang/Select';
 import PageAbout from '@/components/pages/about/About';
 import PageTeam from '@/components/pages/team/Team';
 import PageContact from '@/components/pages/contact/Contact';
@@ -13,48 +16,91 @@ import PageThanks from '@/components/pages/contact/Thanks';
 import PageWorks from '@/components/pages/works/Works';
 import PageServices from '@/components/pages/services/Services';
 
+import PageNews from 'modules/news/components/pages/news/News';
+import PageNewsList from 'modules/news/components/pages/news/List';
+
+import PageAdminEntry from 'modules/admin/components/Entry';
+import AdminRoutes from 'modules/admin/routes.js';
+
 const router = new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'PageIndex',
-      component: PageIndex
+      component: PageSelectLang,
+      name: 'PageSelectLang',
+      props: true
     },
     {
-      path: '/about',
-      name: 'PageAbout',
-      component: PageAbout
+      path: '/admin',
+      component: PageAdminEntry,
+      children: AdminRoutes
     },
     {
-      path: '/team',
-      name: 'PageTeam',
-      component: PageTeam
-    },
-    // {
-    //   path: '/company',
-    //   name: 'PageCompany',
-    //   component: PageCompany
-    // },
-    {
-      path: '/contact',
-      name: 'PageContact',
-      component: PageContact
-    },
-    {
-      path: '/contact-thanks',
-      name: 'PageThanks',
-      component: PageThanks
-    },
-    {
-      path: '/works',
-      name: 'PageWorks',
-      component: PageWorks
-    },
-    {
-      path: '/services',
-      name: 'PageServices',
-      component: PageServices
+      path: '/:lang/',
+      component: PageSelectLang,
+      props: true,
+      children: [
+        {
+          path: '',
+          component: PageIndex,
+          name: 'PageIndex',
+          props: true
+        },
+        {
+          path: 'about',
+          component: PageAbout,
+          name: 'PageAbout',
+          props: true
+        },
+        {
+          path: 'team',
+          component: PageTeam,
+          name: 'PageTeam',
+          props: true
+        },
+        {
+          path: 'contact',
+          name: 'PageContact',
+          component: PageContact,
+          props: true
+        },
+        {
+          path: '/contact-thanks',
+          name: 'PageThanks',
+          component: PageThanks,
+          props: true
+        },
+        {
+          path: '/:lang/works',
+          name: 'PageWorks',
+          component: PageWorks,
+          props: true
+        },
+        {
+          path: '/:lang/services',
+          name: 'PageServices',
+          component: PageServices,
+          props: true
+        },
+        {
+          path: '/:lang/news/:date/:slug/:id',
+          name: 'PageNews',
+          component: PageNews,
+          props: true
+        },
+        {
+          path: '/:lang/news/:year',
+          name: 'PageNewsYear',
+          component: PageNewsList,
+          props: true
+        },
+        {
+          path: '/:lang/news',
+          name: 'PageNewsList',
+          component: PageNewsList
+        }
+      ]
     }
   ],
   scrollBehavior(to) {
@@ -69,7 +115,6 @@ const router = new Router({
 });
 
 router.beforeEach(async (to, from, next) => {
-
   let nextParams = true;
   if(to.meta) {
 
@@ -131,5 +176,13 @@ router.beforeEach(async (to, from, next) => {
   }
 });
 
+
+router.beforeResolve(async (to, from, next) => {
+  let lang = _.get(to.params, 'lang', 'en');
+  if(lang) {
+    Vue.$store.dispatch('setLang', lang);
+  }
+  next(true);
+});
 
 export default router;

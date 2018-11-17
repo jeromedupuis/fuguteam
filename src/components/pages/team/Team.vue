@@ -32,6 +32,18 @@ export default {
     return {
       center: { lat: 45.508, lng: -73.587 }
     };
+  },
+  metaInfo () {
+    return {
+      title: this.$t(`meta-team-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-team-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-team-keywords`),
+      }]
+    };
   }
 };
 </script>

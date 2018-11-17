@@ -10,8 +10,11 @@ const state = {
   one: null
 };
 const getters = {
-  getNews: state => {
-    return state.list;
+  getNews: (state, getters) => {
+    return state.list.filter((x) => {
+      let locale = getters.getLocale;
+      return !x.lang || x.lang === locale;
+    });
   },
   getOneNew: state => {
     return (params) => {

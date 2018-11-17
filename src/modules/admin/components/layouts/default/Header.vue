@@ -4,11 +4,11 @@
 
     <nav class="layout-admin_nav">
       <ul>
-        <li>
-          <button class="button-notification--header" />
+        <li v-if="me">
+          {{ me.email }}
         </li>
         <li>
-          <router-link to="/logout">Logout</router-link>
+          <router-link :to="{ name: 'PageAdminLogout' }">Logout</router-link>
         </li>
       </ul>
     </nav>

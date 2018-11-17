@@ -16,6 +16,18 @@ export default {
   components: {
     LayoutDefault,
     LayoutIntroduction
+  },
+  metaInfo () {
+    return {
+      title: this.$t(`meta-services-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-services-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-services-keywords`),
+      }]
+    };
   }
 };
 </script>

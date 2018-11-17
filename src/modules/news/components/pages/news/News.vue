@@ -37,6 +37,18 @@ import LayoutIntroduction from '@/components/layouts/common/Introduction';
 import NewsSidebar from './Sidebar';
 
 export default {
+  metaInfo () {
+    return {
+      title: this.$t(`meta-news-prefix-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-news-prefix-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-news-prefix-keywords`),
+      }]
+    };
+  },
   components: {
     LayoutDefault,
     LayoutIntroduction,

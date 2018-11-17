@@ -12,7 +12,7 @@
         <div class="col-9">
           <template v-if="news && news.length">
             <div class="page-news_listItem" v-for="(n, index) in news" :key="index">
-              <router-link :to="`/news/${n.date}/${n.slug}/${n.id}`">
+              <router-link :to="`/${getLocale}/news/${n.date}/${n.slug}/${n.id}`">
                 <div class="box-title">
                   <div class="page-news_date">
                     {{ n.date | moment('YYYY.MM.DD') }}
@@ -43,6 +43,18 @@ import LayoutIntroduction from '@/components/layouts/common/Introduction';
 import NewsSidebar from './Sidebar';
 
 export default {
+  metaInfo () {
+    return {
+      title: this.$t(`meta-news-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-news-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-news-keywords`),
+      }]
+    };
+  },
   components: {
     LayoutDefault,
     LayoutIntroduction,

@@ -6,14 +6,12 @@ import _ from 'lodash';
 import adminInit from '@/modules/admin/init.js';
 import uiInit from '@/modules/ui/init.js';
 import notificationInit from '@/modules/notification/init.js';
-import commentInit from '@/modules/comment/init.js';
 import newsInit from '@/modules/news/init.js';
 
 let modules = [
   adminInit,
   uiInit,
   notificationInit,
-  commentInit,
   newsInit
 ];
 

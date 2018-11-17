@@ -27,6 +27,18 @@ import IndexNews from './News';
 import IndexContact from './Contact';
 
 export default {
+  metaInfo () {
+    return {
+      title: this.$t(`meta-index-title`),
+      meta: [{
+        name: `description`,
+        content: this.$t(`meta-index-description`),
+      }, {
+        name: `keywords`,
+        content: this.$t(`meta-index-keywords`),
+      }]
+    };
+  },
   components: {
     LayoutDefault,
     LayoutIntroduction,

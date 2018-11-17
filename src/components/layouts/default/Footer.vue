@@ -26,25 +26,17 @@
           <router-link :to="{ name: 'PageContact' }">{{ $t('nav-contact')}}</router-link>
         </li>
       </ul>
-
-      <ul class="float--right nav--languages">
-        <li>
-          <a @click.prevent="setLang('fr')">FR</a> /
-          <a @click.prevent="setLang('en')">EN</a> /
-          <a @click.prevent="setLang('ja')">JA</a>
-        </li>
-      </ul>
+      <select-lang />
       <div class="clear--both"></div>
     </nav>
   </div>
 </template>
 
 <script>
+import SelectLang from '../common/SelectLang';
 export default {
-  methods: {
-    setLang(lang) {
-      this.$store.dispatch('setLang', lang);
-    }
+  components: {
+    SelectLang
   }
 };
 </script>
