@@ -25,7 +25,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      //'modernizr$': path.resolve(__dirname, "../../.modernizrrc.js")
+      'modules': resolve('src/modules')
     }
   },
   module: {
@@ -69,10 +69,6 @@ module.exports = {
         test: /\.(vue?|js)(\?.*)?$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
-      },
-      {
-        loader: "webpack-modernizr-loader",
-        test: /\.modernizrrc\.js$/
       }
     ]
   },

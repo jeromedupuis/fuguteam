@@ -1,0 +1,24 @@
+.section-container {
+  .section-container_head {
+    margin-bottom: 36px;
+    margin-top:12px;
+    h1 {
+      font-family: 'Abel', sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      text-align: center;
+
+      &.text--shadow {
+        text-shadow: 4px 6px 0 rgba(0,0,0,.12);
+      }
+    }
+  }
+}
+
+.bg--gradient {
+  background: #a72727; /* Old browsers */
+  background: -moz-linear-gradient(left, #a72727 0%, #c84343 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #a72727 0%,#c84343 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #a72727 0%,#c84343 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a72727', endColorstr='#c84343',GradientType=1 ); /* IE6-9 */
+}

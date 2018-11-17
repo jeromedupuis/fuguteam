@@ -13,6 +13,5 @@ files.map((file) => {
     Object.assign(messages[lang], file[lang]);
   }
 });
-console.log('messages', messages);
 
 export default messages;

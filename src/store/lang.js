@@ -3,7 +3,7 @@ import app from '../main';
 const SET_LANG = 'SET_LANG';
 
 const state = {
-  locale: 'en'
+  locale: navigator.language || navigator.userLanguage || 'en'
 };
 const getters = {
   getLocale(state) {

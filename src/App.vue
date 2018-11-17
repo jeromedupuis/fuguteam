@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition>
+      <router-view />
+    </transition>
     <vue-progress-bar />
+    <module-notification />
   </div>
 </template>
 

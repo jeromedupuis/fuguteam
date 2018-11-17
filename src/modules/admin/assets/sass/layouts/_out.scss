@@ -1,0 +1,26 @@
+@import "common";
+
+.layout-adminOut {
+  position:relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.layout-adminOut_leftSide {
+  background:url("/static/img/intro-bg6.jpg");
+  background-size: auto 100%;
+  padding-right: 460px;
+  height: 100vh;
+  width: 100%;
+}
+.layout-adminOut_rightSide {
+  background:white;
+  position: absolute;
+  right:0;
+  top:0;
+  height: 100vh;
+  width:460px;
+  z-index: 10;
+}
+.clearfix {
+  clear:both;
+}

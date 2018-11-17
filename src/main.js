@@ -1,10 +1,27 @@
 import 'babel-polyfill';
-import '../.modernizrrc.js';
 import Vue from 'vue';
 import VueProgressBar from 'vue-progressbar';
 import VueScrollTo from 'vue-scrollto';
 import { EventBus } from './event-bus';
+import firebase from 'firebase';
 
+let config = {
+  apiKey: "AIzaSyDY3AuBn7TmKSiDIWKpBkUBvP8nX3jV8PM",
+  authDomain: "fuguteam-78d3c.firebaseapp.com",
+  databaseURL: "https://fuguteam-78d3c.firebaseio.com",
+  projectId: "fuguteam-78d3c",
+  storageBucket: "fuguteam-78d3c.appspot.com",
+  messagingSenderId: "978580817829",
+};
+firebase.initializeApp(config);
+const firestore = firebase.firestore();
+firestore.settings({
+  timestampsInSnapshots: true
+});
+Vue.$db = firestore;
+
+
+import './modules';
 import './mixins';
 
 import App from './App';

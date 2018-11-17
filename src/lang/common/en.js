@@ -1,4 +1,7 @@
 export default {
+  "lang-en": "English",
+  "lang-fr": "French",
+  "lang-ja": "Japanese",
   "nav-top": "TOP",
   "nav-team": "Team",
   "nav-works": "Works",

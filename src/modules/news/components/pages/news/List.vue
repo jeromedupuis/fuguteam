@@ -42,19 +42,19 @@ import LayoutDefault from '@/components/layouts/default/Layout';
 import LayoutIntroduction from '@/components/layouts/common/Introduction';
 import NewsSidebar from './Sidebar';
 
-import News20190101 from './body/20190101';
-
 export default {
   components: {
     LayoutDefault,
     LayoutIntroduction,
-    NewsSidebar,
-    News20190101
+    NewsSidebar
   },
   props: {
     year: {
       required: false
     }
+  },
+  async mounted() {
+    await this.$store.dispatch('fetchNews');
   },
   computed: {
     subtitle() {
@@ -64,12 +64,18 @@ export default {
       return `our last news`;
     },
     news() {
+      let news = [];
       if(!this.year) {
-        return this.$store.getters.getNews;
+        news = this.$store.getters.getNews;
+      } else {
+        news = this.$store.getters.getNews.filter((x) => {
+          return moment(x.date).year() === parseInt(this.year);
+        });
       }
-      return this.$store.getters.getNews.filter((x) => {
-        return moment(x.date).year() === parseInt(this.year);
+      news.map((x) => {
+        x.date = moment(x.date).format('YYYY-MM-DD');
       });
+      return news;
     }
   }
 };
