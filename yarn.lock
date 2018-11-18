@@ -8261,6 +8261,11 @@ vue-full-calendar@^2.7.0:
     fullcalendar "^3.4.0"
     lodash.defaultsdeep "^4.6.0"
 
+vue-gtm@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-2.0.0.tgz#8e6ce2408410abda9787e68d257cb1a957c75805"
+  integrity sha512-9h2FI8Z4kZQ5SP55uFFQVHDwdr5UsJav8HpaRmsWB9D4lbP/HAzcsNxLPbgr/pLOMP+0ZXIYte90Cj0Uqyj2bg==
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
@@ -8349,6 +8354,11 @@ vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
+
+vue-tag-manager@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/vue-tag-manager/-/vue-tag-manager-0.1.2.tgz#9602f944118a4fc849c1cff80aa3f57439685994"
+  integrity sha512-w1dKcPiBSpVZfsjyL+wdjjBjB1KWWnDjOQuKvbDa7JXjUDB5gOoD3fp2w4zRYCW0Ia5VW/k8ZFWMC+6Ldn/3YA==
 
 vue-template-compiler@^2.5.2:
   version "2.5.17"

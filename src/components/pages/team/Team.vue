@@ -6,7 +6,7 @@
       :fullscreen="false"
     />
 
-    <team-vision />
+    <team-mission />
     <team-values />
     <team-members />
 
@@ -19,6 +19,7 @@ import LayoutIntroduction from '@/components/layouts/common/Introduction';
 import TeamMembers from './Members';
 import TeamVision from './Vision';
 import TeamValues from './Values';
+import TeamMission from './Mission';
 
 export default {
   components: {
@@ -26,7 +27,8 @@ export default {
     LayoutIntroduction,
     TeamMembers,
     TeamVision,
-    TeamValues
+    TeamValues,
+    TeamMission
   },
   data() {
     return {

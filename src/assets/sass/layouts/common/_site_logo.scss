@@ -1,11 +1,50 @@
 .site-logo {
-  color:#222;
-  text-decoration: none;
-  float: left;
-  height: 26px;
-  font-size: 20px;
-  line-height: 26px;
-  font-family: 'Abel', sans-serif;
-  position: relative;
-  text-decoration: none;
+    height: 34px;
+    cursor: pointer;
+    float: left;
+    box-sizing: border-box;
+    transition: padding .2s cubic-bezier(.15, .05, .3, .98);
+    pointer-events: all;
+    padding-left: 20px;
+    box-sizing: content-box;
+    color:#333;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    line-height: 44px;
+    height: 48px;
+    font-size: 20px;
+    float: left;
+    img {
+      height: 34px;
+      width: auto;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 8px;
+      min-width: auto;
+      min-height: auto;
+    }
+    span {
+      vertical-align: middle;
+      display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: $max-width-tablet) {
+  .site-logo {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    padding-top: 16px;
+  }
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .site-logo {
+    width: 100%;
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 2px;
+  }
 }

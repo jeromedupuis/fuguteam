@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition>
+    <transition name="slide-fade" mode="out-in">
       <router-view />
     </transition>
     <vue-progress-bar />

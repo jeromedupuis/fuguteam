@@ -6,7 +6,11 @@
       :fullscreen="false"
     />
 
-    <div class="page--inner page-news_list">
+    <section class="section-loader" v-if="isPageLoading">
+      <ui-loader-circle />
+    </section>
+
+    <div class="page--inner page-news_list" v-else>
 
       <div class="row">
         <div class="col-9">
@@ -19,9 +23,7 @@
                   </div>
                   <h1>{{ n.title }}</h1>
                 </div>
-                <p class="page-news_description">
-                  {{ n.description }}
-                </p>
+                <div class="page-news_description" v-html="n.body"></div>
               </router-link>
             </div>
           </template>
@@ -60,13 +62,20 @@ export default {
     LayoutIntroduction,
     NewsSidebar
   },
+  data() {
+    return {
+      isPageLoading: false
+    };
+  },
   props: {
     year: {
       required: false
     }
   },
   async mounted() {
+    this.isPageLoading = true;
     await this.$store.dispatch('fetchNews');
+    this.isPageLoading = false;
   },
   computed: {
     subtitle() {

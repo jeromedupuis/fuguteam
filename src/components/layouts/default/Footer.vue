@@ -3,30 +3,20 @@
 
     <nav class="layout-default_nav">
 
-      <ul class="float--left">
+      <default-nav class="float--left nav--lang" />
+
+      <ul class="float--right nav--sns">
         <li>
-          <router-link :to="{ name: 'PageIndex' }">{{ $t('nav-top')}}</router-link>
+          <a href="#" target="_blank">
+            <img src="/static/img/svg/facebook-letter-logo.svg" />
+          </a>
         </li>
         <li>
-          <router-link :to="{ name: 'PageTeam' }">{{ $t('nav-team')}}</router-link>
-        </li>
-        <!-- <li>
-          <router-link :to="{ name: 'PageCompany' }">{{ $t('nav-company')}}</router-link>
-        </li> -->
-        <!-- <li>
-          <router-link :to="{ name: 'PageServices' }">{{ $t('nav-services')}}</router-link>
-        </li> -->
-        <li>
-          <router-link :to="{ name: 'PageWorks' }">{{ $t('nav-works')}}</router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'PageNewsList' }">{{ $t('nav-news')}}</router-link>
-        </li>
-        <li>
-          <router-link :to="{ name: 'PageContact' }">{{ $t('nav-contact')}}</router-link>
+          <a href="#" target="_blank">
+            <img src="/static/img/svg/twitter-logo.svg" />
+          </a>
         </li>
       </ul>
-      <select-lang />
       <div class="clear--both"></div>
     </nav>
   </div>
@@ -34,9 +24,11 @@
 
 <script>
 import SelectLang from '../common/SelectLang';
+import DefaultNav from './Nav';
 export default {
   components: {
-    SelectLang
+    SelectLang,
+    DefaultNav
   }
 };
 </script>

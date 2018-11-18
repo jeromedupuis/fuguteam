@@ -1,33 +1,35 @@
 <template>
   <layout-default class="page-news_article">
-    <template v-if="thisNew">
-      <layout-introduction
-        :title="thisNew.title"
-        :subtitle="$t('intro-news')"
-        :fullscreen="false"
-      />
+    <layout-introduction
+      :title="newTitle"
+      :subtitle="$t('intro-news')"
+      :fullscreen="false"
+    />
 
-      <div class="page--inner">
+    <section class="section-loader" v-if="isPageLoading || !thisNew">
+      <ui-loader-circle />
+    </section>
 
-        <div class="row">
-          <div class="col-9">
-            <div class="box-title">
-              <div class="page-news_date">
-                {{ thisNew.date | moment('YYYY.MM.DD') }}
-              </div>
-              <h1>{{ thisNew.title }}</h1>
+    <div class="page--inner" v-else>
+
+      <div class="row">
+        <div class="col-9">
+          <div class="box-title">
+            <div class="page-news_date">
+              {{ thisNew.date | moment('YYYY.MM.DD') }}
             </div>
-            <div class="page-news_articleBody">
-              <div class="box-content" v-html="thisNew.body"></div>
-            </div>
+            <h1>{{ thisNew.title }}</h1>
           </div>
-          <div class="col-3">
-            <news-sidebar />
+          <div class="page-news_articleBody">
+            <div class="box-content" v-html="thisNew.body"></div>
           </div>
         </div>
-
+        <div class="col-3">
+          <news-sidebar />
+        </div>
       </div>
-    </template>
+
+    </div>
   </layout-default>
 </template>
 
@@ -55,6 +57,11 @@ export default {
     LayoutIntroduction,
     NewsSidebar
   },
+  data() {
+    return {
+      isPageLoading: false
+    };
+  },
   props: {
     lang: {
       required: true
@@ -77,6 +84,8 @@ export default {
     }
   },
   async mounted() {
+    this.isPageLoading = true;
+    await this.$store.dispatch('fetchNews');
     await this.$store.dispatch('resetOne');
     await this.$store.dispatch('fetchOneNew', {
       id: this.id,
@@ -86,11 +95,15 @@ export default {
     });
     if(this.thisNew.lang !== this.lang) {
       this.$router.push(`/${this.getLocale}/news/`);
-    }  
+    }
+    this.isPageLoading = false;
   },
   computed: {
     thisNew() {
       return this.$store.getters.getOne;
+    },
+    newTitle() {
+      return _.get(this.thisNew, 'title', '...');
     }
   }
 };

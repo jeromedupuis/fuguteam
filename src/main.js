@@ -4,6 +4,7 @@ import VueProgressBar from 'vue-progressbar';
 import VueScrollTo from 'vue-scrollto';
 import { EventBus } from './event-bus';
 import firebase from 'firebase';
+import VueGtm from 'vue-gtm';
 
 let config = {
   apiKey: "AIzaSyDY3AuBn7TmKSiDIWKpBkUBvP8nX3jV8PM",
@@ -46,6 +47,14 @@ Vue.use(VueProgressBar, {
     opacity: '0.6s',
     termination: 800
   }
+});
+
+Vue.use(VueGtm, {
+  id: 'GTM-MS5JTMC',
+  enabled: true,
+  debug: false,
+  vueRouter: router,
+  ignoredViews: ['admin']
 });
 
 /* eslint-disable no-new */

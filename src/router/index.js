@@ -182,6 +182,7 @@ router.beforeResolve(async (to, from, next) => {
   if(lang) {
     Vue.$store.dispatch('setLang', lang);
   }
+  Vue.$bus.$emit('toggleSideMenu', false);
   next(true);
 });
 
