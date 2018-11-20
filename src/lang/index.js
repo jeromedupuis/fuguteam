@@ -1,7 +1,8 @@
 import common from './common/index.js';
+import index from './index/index.js';
 import about from './about/index.js';
 import meta from './meta/index.js';
-let files = [meta, common, about];
+let files = [meta, common, index, about];
 
 let messages = {
   fr: {},

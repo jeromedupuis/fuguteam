@@ -1,7 +1,10 @@
 export default {
   "text-about": `
     <div>
-      <h3>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト サンプルテキスト サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト サンプルテキスト サンプルテキスト</p>
+      <h3>プロダクトやサービスは、ふぐ（fugu）のような生き物です。<br />
+      ふぐは正しい知識と技術をもつ職人が調理しなければ、みんなでおいしく食べることはできません。<br />
+      プロダクトも然り。<br />
+      私たちfuguチームは、人々のインサイトに寄り添いながら、プロダクトを正しくカタチにしていきます。</p>
     </div>
   `,
   "text-vision": `
@@ -11,16 +14,36 @@ export default {
   `,
   "text-mission": `
     <div>
-      <h3>Le passage de Lorem Ipsum standard, utilisé depuis 1500</h3></div>
+      <h3>人々のインサイトをカタチにして、世の中に必要なものを生み出す</h3>
+    </div>
   `,
   "text-value-1": `
     <div>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>リスペクトを忘れない</p>
+      <p>私たちは関わる全ての人々、仕事、環境に敬意をはらいます。</p>
+      <p>敬意を持って真剣に向き合い、最適な選択肢を提案していきます。</p>
     </div>
   `,
   "text-value-2": `
     <div>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>誠実であれ<br />チーム、パートナー、結果、プロダクト</p>
+    </div>
+  `,
+  "text-value-3": `
+    <div>
+      <p>ともに成功する</p>
+      <p>成功は、一人だけでは得られませんし、一緒に分かち合う相手がいなければつまらない。</p>
+      <p>全体の最適解を常に考え抜き、個人としてどのように貢献するのかというチームワークを大切にしていきます。</p>
+    </div>
+  `,
+  "text-value-4": `
+    <div>
+      <p>
+        100万分の1の希少な存在になる<br />
+        社会のレアカードになる
+      </p>
+      <p>求められる能力が日々変わっていく今、あなたじゃなきゃ嫌だ、と言われる存在になります。</p>
+      <p>そのためには、現状の自分にとらわれず、様々な側面からプロになることを実現していきます</p>
     </div>
   `
 };

@@ -9,6 +9,11 @@
     <div class="box-content">
       <div class="page-company_vision" v-html="$t('text-value-2')"></div>
     </div>
-
+    <div class="box-content">
+      <div class="page-company_vision" v-html="$t('text-value-3')"></div>
+    </div>
+    <div class="box-content">
+      <div class="page-company_vision" v-html="$t('text-value-4')"></div>
+    </div>
   </div>
 </template>

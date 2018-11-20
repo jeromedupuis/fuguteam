@@ -1,6 +1,6 @@
 <template>
-  <div class="layout-intro" ref="LayoutIntro" id="layoutIntro" :class="[{ 'is--fullscreen': fullscreen }]">
-    <div class="layout-intro_inner" :class="[{'has--animation':animation }, {'is--animated':animated}]">
+  <div class="layout-intro" ref="LayoutIntro" id="layoutIntro" :class="[{ 'is--fullscreen': fullscreen }, 'is--'+getLocale]">
+    <div class="layout-intro_inner" :class="[{'has--animation':animation }, {'is--animated':animated }]">
       <h1 v-if="title">
         <small v-if="subtitle">{{ subtitle }}</small>
         {{ title }}

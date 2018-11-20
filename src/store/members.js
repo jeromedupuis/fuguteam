@@ -3,9 +3,12 @@ const state = {
     {
       name: 'Jerome Dupuis',
       role: {
-        ja: '代表取締役',
-        en: 'CEO',
-        fr: 'CEO'
+        // ja: '代表取締役',
+        // en: 'CEO',
+        // fr: 'CEO'
+        ja: 'フロントエンドエンジニア',
+        en: 'Front End Engineer',
+        fr: 'Front End Engineer'
       },
       work: {
         ja: 'フロントエンドエンジニア',
@@ -28,9 +31,9 @@ const state = {
     {
       name: 'Misaki Akimoto',
       role: {
-        ja: '代表取締役',
-        en: 'CEO',
-        fr: 'CEO'
+        ja: 'プロジェクトマネジメント',
+        en: 'Project Manager',
+        fr: 'Chargée de projet'
       },
       work: {
         ja: 'プロジェクトマネジメント、マーケティング',
@@ -39,12 +42,12 @@ const state = {
       },
       img: '/static/img/members/akimoto.jpg',
       location: {
-        ja: '神奈川県出身、東京都在住。',
+        ja: '神奈川県横浜出身。',
         en: 'From Kanagawa, Japan. Currently in Tokyo。',
         fr: 'De Kanagawa, Japon. Actuellement à Tokyo',
       },
       description: {
-        ja: 'サンプルテキストサンプルテキストサンプルテキストサンプルテキスト。サンプルテキストサンプルテキストサンプルテキストサンプルテキスト。サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト。サンプルテキスト。',
+        ja: 'アジア諸国にて新規事業の開拓や通販事業のマーケティングに携わったのち、2017年に帰国。日本に帰国後は新規事業の立ち上げやプロダクト開発にプロダクトマネージャーとして従事しています',
         en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         fr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
       },
