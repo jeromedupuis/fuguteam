@@ -7,7 +7,7 @@
       :animation="true"
     />
     <index-about />
-    <!-- <index-services /> -->
+    <index-services />
     <index-works />
     <index-clients />
     <index-news />

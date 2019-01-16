@@ -1,5 +1,5 @@
 <template>
-  <div class="box box--wrapper">
+  <div class="box box--wrapper box--services">
     <div class="box-title">
       <h2>SERVICES</h2>
     </div>
@@ -37,16 +37,16 @@
             <img src="/static/img/react.png" />
           </div>
           <h2>
-            VueJs App
+            SPA Development
           </h2>
           <p>Performance, Scalability, Reusable Components, One Way Data Flow - the perfect ingredients for single-page applications.</p>
         </div>
         <div class="col-3 section-services_listItem">
           <div class="section-services_listItem_head">
-            <img src="/static/img/vuejs.png" />
+            <img src="/static/img/svg/marketing.svg" />
           </div>
           <h2>
-            React App
+            Marketing
           </h2>
           <p>Performance, Scalability, Reusable Components, One Way Data Flow - the perfect ingredients for single-page applications.</p>
         </div>

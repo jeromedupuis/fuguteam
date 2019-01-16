@@ -3,12 +3,14 @@
     <div class="row">
       <div class="col-4" :class="[{ 'is--empty':!project.img }]" v-for="(project, index) in projects" :key="index">
         <div class="section-project_listItem">
-          <img :src="`/static/img/${project.img}`" :alt="project.title" v-if="project.img"/>
-          <h4>{{ displayByLocale(project.title) }}</h4>
-          <p class="text--description">
-            {{ displayByLocale(project.description) }}
-          </p>
-          <p class="text--date">{{ project.date | moment('YYYY.MM.DD') }}</p>
+          <template v-if="project.img">
+            <img :src="`/static/img/${project.img}`" :alt="project.title" v-if="project.img"/>
+            <h4>{{ displayByLocale(project.title) }}</h4>
+            <p class="text--description">
+              {{ displayByLocale(project.description) }}
+            </p>
+            <p class="text--date">{{ project.date | moment('YYYY.MM.DD') }}</p>
+          </template>
         </div>
       </div>
     </div>
