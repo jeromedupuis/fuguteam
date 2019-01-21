@@ -1,5 +1,5 @@
-# FUGU HTML
+# FUGU TEAM
 
-> Project status : in development <br />
-> Project management app between freelance and client<br />
+> Sample Corporate Website
+> Status : In development
 > License : any reproduction prohibitited.
